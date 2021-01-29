@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hotel.Reserva_ServiciosController">
+   <children>
+      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <VBox layoutX="32.0" layoutY="70.0" spacing="14.0">
+         <children>
+            <DatePicker fx:id="fecha" layoutX="32.0" layoutY="70.0" onContextMenuRequested="#date_check" prefHeight="25.0" prefWidth="101.0" />
+            <TextField fx:id="servicio" layoutX="32.0" layoutY="116.0" prefHeight="25.0" prefWidth="190.0" promptText="Servicio" />
+            <TextField fx:id="nombre" layoutX="32.0" layoutY="160.0" prefHeight="25.0" prefWidth="190.0" promptText="Nombre" />
+            <TextField fx:id="apellido" layoutX="32.0" layoutY="207.0" prefHeight="25.0" prefWidth="190.0" promptText="Apellido" />
+            <TextField fx:id="rut" layoutX="32.0" layoutY="250.0" prefHeight="25.0" prefWidth="190.0" promptText="Rut" />
+            <TextField fx:id="telefono" layoutX="32.0" layoutY="293.0" prefHeight="25.0" prefWidth="190.0" promptText="Teléfono" />
+            <TextField fx:id="asistentes" layoutX="32.0" layoutY="340.0" prefHeight="25.0" prefWidth="190.0" promptText="Número de asistentes" />
+         </children>
+      </VBox>
+      <VBox layoutX="42.0" layoutY="370.0" spacing="16.0">
+         <children>
+            <CheckBox fx:id="gar_box" layoutX="42.0" layoutY="370.0" mnemonicParsing="false" onAction="#gar_method" text="Garzones" />
+            <CheckBox fx:id="music_box" layoutX="48.0" layoutY="409.0" mnemonicParsing="false" onAction="#music_method" text="Música" />
+            <CheckBox fx:id="deco_box" layoutX="42.0" layoutY="440.0" mnemonicParsing="false" onAction="#deco_method" text="Decoración" />
+         </children>
+      </VBox>
+      <TableView fx:id="table" layoutX="239.0" layoutY="73.0" prefHeight="455.0" prefWidth="531.0">
+        <columns>
+          <TableColumn fx:id="col_serv" prefWidth="261.0" text="Servicio" />
+          <TableColumn fx:id="col_cap" prefWidth="273.0" text="Capacidad" />
+        </columns>
+      </TableView>
+      <Button layoutX="32.0" layoutY="534.0" mnemonicParsing="false" onAction="#reservar" prefHeight="48.0" prefWidth="190.0" text="Reservar">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="btnSalir" layoutX="689.0" layoutY="544.0" mnemonicParsing="false" onAction="#btnSalir_click" prefHeight="36.0" prefWidth="81.0" text="Salir" textFill="#f80707">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Label layoutX="64.0" layoutY="343.0" text="Servicios adicionales">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Label>
+      <Label layoutX="77.0" layoutY="41.0" text="Reserva de servicio">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <Button layoutX="574.0" layoutY="30.0" mnemonicParsing="false" onAction="#refresh_table" prefHeight="38.0" prefWidth="196.0" text="Actualizar tabla">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Button>
+      <Button layoutX="143.0" layoutY="70.0" mnemonicParsing="false" onAction="#date_check" prefHeight="25.0" prefWidth="81.0" text="Comprobar" />
+      <Label layoutX="239.0" layoutY="544.0" text="Precio total:  ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="total" layoutX="400.0" layoutY="543.0" prefHeight="38.0" prefWidth="202.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="32.0" layoutY="475.0" mnemonicParsing="false" onAction="#precio" prefHeight="48.0" prefWidth="190.0" text="Calcular">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="btnVolver" layoutX="596.0" layoutY="544.0" mnemonicParsing="false" onAction="#btnVolver_click" prefHeight="36.0" prefWidth="81.0" text="Volver" textFill="#3d07ee">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

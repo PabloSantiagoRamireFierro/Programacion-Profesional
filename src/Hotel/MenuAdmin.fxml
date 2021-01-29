@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="359.0" prefWidth="233.99990000000253" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Hotel.MenuAdminController">
+  <children>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="343.0" prefWidth="234.0">
+      <children>
+        <Label layoutX="31.0" layoutY="14.0" text="Bienvenido Administrador" underline="true">
+          <font>
+            <Font name="Bookman Old Style" size="14.0" />
+          </font>
+        </Label>
+        <Label layoutX="30.0" layoutY="42.0" text="Seleccione la opcion que requiera:" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="71.3671875" layoutX="19.0" layoutY="64.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+        <Button id="btnReservas" fx:id="btnControl_Habitación" layoutX="31.0" layoutY="74.0" mnemonicParsing="false" onAction="#btnControl_Habitación_click" prefHeight="23.4765625" prefWidth="177.0" text="Control de Habitación">
+          <font>
+            <Font name="System Bold Italic" size="12.0" fx:id="x3" />
+          </font>
+        </Button>
+        <Button id="btnSalir" fx:id="btnVolver" font="$x3" layoutX="17.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnVolver_click" prefWidth="200.0" text="Volver" textFill="#1000cc" />
+        <Text layoutX="48.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear, modificar y eliminar Habitaciones">
+          <font>
+            <Font size="8.0" fx:id="x1" />
+          </font>
+        </Text>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="71.3671875" layoutX="19.0" layoutY="148.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
+          <fill>
+            <Color blue="0.875" green="0.875" red="0.875" fx:id="x2" />
+          </fill>
+        </Rectangle>
+        <Button id="btnReservas" fx:id="btnControl_Servicio" font="$x3" layoutX="30.0" layoutY="158.0" mnemonicParsing="false" onAction="#btnControl_Servicio_click" prefHeight="23.4765625" prefWidth="177.0" text="Control de Servicio" />
+        <Text font="$x1" layoutX="54.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear, modificar y eliminar Servicios" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x2" height="71.3671875" layoutX="19.0" layoutY="229.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+        <Button id="btnReservas" fx:id="btnControl_Usuario" font="$x3" layoutX="30.0" layoutY="239.0" mnemonicParsing="false" onAction="#btnControl_Usuario_click" prefHeight="23.4765625" prefWidth="177.0" text="Control de Usuario" />
+        <Text font="$x1" layoutX="55.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear, modificar y eliminar Usuarios" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>

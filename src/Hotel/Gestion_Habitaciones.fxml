@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="574.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hotel.Gestion_HabitacionesController">
+   <children>
+      <VBox layoutX="15.0" layoutY="59.0" spacing="9.0">
+         <children>
+            <DatePicker fx:id="dateIngreso_Editar" layoutX="15.0" layoutY="59.0" prefHeight="25.0" prefWidth="202.0" promptText="Fecha de Ingreso" />
+            <DatePicker fx:id="dateSalida_Editar" layoutX="15.0" layoutY="94.0" prefHeight="25.0" prefWidth="201.0" promptText="Fecha de Salida" />
+            <TextField fx:id="textNombre_Editar" layoutX="15.0" layoutY="129.0" prefWidth="200.0" promptText="Nombre" />
+            <TextField fx:id="textApellido_Editar" layoutX="16.0" layoutY="154.0" prefWidth="200.0" promptText="Apellido" />
+            <TextField fx:id="textNumeroHabitacion_Editar" layoutX="17.0" layoutY="188.0" prefHeight="25.0" prefWidth="200.0" promptText="Numero de Habitación" />
+            <TextField fx:id="textRut_Editar" layoutX="17.0" layoutY="223.0" prefWidth="200.0" promptText="RUT" />
+            <TextField fx:id="textTelefono_Editar" layoutX="17.0" layoutY="258.0" prefWidth="200.0" promptText="Teléfono" />
+            <TextField fx:id="textEmail_Editar" layoutX="17.0" layoutY="293.0" prefWidth="200.0" promptText="Email" />
+            <Button fx:id="btnEditar" layoutX="17.0" layoutY="328.0" mnemonicParsing="false" onAction="#btnEditar_click" prefHeight="36.0" prefWidth="200.0" text="Editar">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="table" layoutX="226.0" layoutY="59.0" prefHeight="449.0" prefWidth="823.0">
+         <columns>
+            <TableColumn fx:id="col_num" prefWidth="85.0" text="N° Habitación" />
+            <TableColumn fx:id="col_cliente" minWidth="0.0" text="Nombre" />
+            <TableColumn fx:id="col_apellido" minWidth="0.0" prefWidth="81.0" text="Apellido" />
+            <TableColumn fx:id="col_rut" prefWidth="75.0" text="RUT" />
+            <TableColumn fx:id="col_telefono" prefWidth="111.0" text="Telefono" />
+            <TableColumn fx:id="col_email" prefWidth="85.0" text="Email" />
+            <TableColumn fx:id="col_dateIngreso" prefWidth="111.0" text="Fecha de Ingreso" />
+            <TableColumn fx:id="col_dateSalida" prefWidth="118.0" text="Fecha de Salida" />
+            <TableColumn fx:id="col_precio" prefWidth="75.0" text="Precio" />
+         </columns>
+      </TableView>
+      <Label layoutX="64.0" layoutY="22.0" text="Editar Reserva">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="375.0" text="Eliminar Reserva">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEliminar" layoutX="14.0" layoutY="524.0" mnemonicParsing="false" onAction="#btnEliminar_click" prefHeight="36.0" prefWidth="200.0" text="Eliminar">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="dateIngreso_Eliminar" layoutX="14.0" layoutY="484.0" prefHeight="25.0" prefWidth="202.0" promptText="Fecha de Ingreso" />
+      <TextField fx:id="textNumeroHabitacion_Eliminar" layoutX="14.0" layoutY="404.0" prefHeight="25.0" prefWidth="200.0" promptText="Numero de Habitación" />
+      <TextField fx:id="textNombre_Eliminar" layoutX="14.0" layoutY="444.0" prefWidth="200.0" promptText="Nombre" />
+      <Button fx:id="btnSalir" layoutX="886.0" layoutY="518.0" mnemonicParsing="false" onAction="#btnSalir_click" prefHeight="36.0" prefWidth="163.0" text="Salir" textFill="RED" />
+      <Button fx:id="btnVolver" layoutX="714.0" layoutY="518.0" mnemonicParsing="false" onAction="#btnVolver_click" prefHeight="36.0" prefWidth="163.0" text="Volver" textFill="#0029ff" />
+      <Button fx:id="btnRefrescar" layoutX="765.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnRefrescar_click" prefHeight="36.0" prefWidth="284.0" text="Actualizar Tabla">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="226.0" layoutY="24.0" text="Numero de Reservas : 00">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

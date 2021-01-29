@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="386.0" prefWidth="669.9999000000025" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Hotel.UsuarioController">
+  <children>
+    <Label layoutX="27.0" layoutY="14.0" text="Crear Usuario" />
+    <VBox id="VBox" alignment="CENTER" layoutX="27.0" layoutY="38.0" spacing="10.0">
+      <children>
+        <TextField fx:id="txtNombreUsuario_Crear" prefWidth="120.0" promptText="Nombre Usuario" />
+        <TextField fx:id="txtContraseña_Crear" prefWidth="120.0" promptText="Contraseña" />
+        <ChoiceBox fx:id="ChoiceAdmin_Crear" prefWidth="120.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList" />
+          </items>
+        </ChoiceBox>
+      </children>
+    </VBox>
+    <Label layoutX="26.0" layoutY="170.0" text="Editar Usuario" />
+    <VBox id="VBox" alignment="CENTER" layoutX="25.0" layoutY="198.0" spacing="10.0">
+      <children>
+        <TextField fx:id="txtId_Editar" prefWidth="120.0" promptText="Ingrese ID" />
+        <TextField id="txtNombreUsuario" fx:id="txtNombreUsuario_Editar" prefWidth="120.0" promptText="Nombre Usuario" text="" />
+        <TextField id="txtContraseña" fx:id="txtContraseña_Editar" prefWidth="120.0" promptText="Contraseña" />
+        <ChoiceBox fx:id="ChoiceAdmin_Editar" prefWidth="120.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList" />
+          </items>
+        </ChoiceBox>
+      </children>
+    </VBox>
+    <Label layoutX="540.0" layoutY="156.0" text="Eliminar Usuario" />
+    <TextField fx:id="txtId_Eliminar" layoutX="538.0" layoutY="184.0" prefWidth="120.0" promptText="Ingrese ID" />
+    <Button fx:id="btnCrear" layoutX="27.0" layoutY="143.0" mnemonicParsing="false" onAction="#btnCrear_click" prefWidth="120.0" text="Crear">
+      <font>
+        <Font name="System Bold Italic" size="12.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button fx:id="btnEditar" font="$x1" layoutX="25.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnEditar_click" prefWidth="120.0" text="Editar" />
+    <Button fx:id="btnEliminar" font="$x1" layoutX="538.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnEliminar_click" prefWidth="119.0" text="Eliminar" />
+    <Label layoutX="540.0" layoutY="20.0" text="Buscar Usuario" />
+    <VBox id="VBox" alignment="CENTER" layoutX="538.0" layoutY="50.0" spacing="10.0">
+      <children>
+        <ChoiceBox fx:id="ChoiceBuscar" prefWidth="116.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList" />
+          </items>
+        </ChoiceBox>
+        <TextField fx:id="txtBusqueda" prefWidth="116.0" promptText="Ingrese la Busqueda" />
+      </children>
+    </VBox>
+    <Button fx:id="btnBuscar" font="$x1" layoutX="538.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnBuscar_click" prefWidth="116.0" text="Buscar" />
+    <Label layoutX="171.0" layoutY="17.0" text="Lista de Usuarios" />
+    <TableView id="TableUsuario" fx:id="TablaUsuario" layoutX="161.0" layoutY="38.0" prefHeight="286.0" prefWidth="361.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="36.0" text="Id" fx:id="ColId" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="116.0" text="Nombre Usuario" fx:id="ColNombreUsuario" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="117.0" text="Contraseña" fx:id="ColContraseña" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="91.0" text="Administrador" fx:id="ColAdmin" />
+      </columns>
+    </TableView>
+    <Button fx:id="btnRefrescar" layoutX="538.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnRefrescar_click" prefHeight="22.0" prefWidth="120.0" text="Mostrar Usuarios" />
+    <Button fx:id="btnVolver" layoutX="536.0" layoutY="351.0" mnemonicParsing="false" onAction="#btnVolver_click" prefHeight="21.0" prefWidth="120.0" text="Volver" textFill="#0029ff" />
+    <Button fx:id="btnSalir" layoutX="536.0" layoutY="320.0" mnemonicParsing="false" onAction="#btnSalir_click" prefHeight="21.0" prefWidth="120.0" text="Salir" textFill="RED" />
+    <Label fx:id="labelResultados" layoutX="161.0" layoutY="328.0" text="Resultados: " />
+  </children>
+</AnchorPane>

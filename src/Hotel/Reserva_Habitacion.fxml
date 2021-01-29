@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="612.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hotel.Reserva_HabitacionController">
+  <children>
+      <TextField fx:id="textNumeroHabitacion" layoutX="25.0" layoutY="190.0" prefHeight="25.0" prefWidth="200.0" promptText="Numero de Habitación" />
+    <TextField fx:id="textEmail" layoutX="25.0" layoutY="373.0" prefWidth="200.0" promptText="Email" />
+      <VBox layoutX="25.0" layoutY="21.0" spacing="9.0">
+         <children>
+            <Label layoutX="25.0" layoutY="21.0" text="Ingrese la fecha de ingreso" />
+            <DatePicker fx:id="dateIngreso" layoutX="25.0" layoutY="50.0" prefHeight="25.0" prefWidth="202.0" />
+            <Label layoutX="25.0" layoutY="81.0" text="Ingrese la fecha de salida" />
+            <DatePicker fx:id="dateSalida" layoutX="25.0" layoutY="110.0" prefHeight="25.0" prefWidth="201.0" />
+         </children>
+      </VBox>
+    <TextField fx:id="textRut" layoutX="25.0" layoutY="299.0" prefWidth="200.0" promptText="RUT" />
+    <TextField fx:id="textTelefono" layoutX="25.0" layoutY="336.0" prefWidth="200.0" promptText="Teléfono" />
+      <Button fx:id="btnComprobar" layoutX="24.0" layoutY="144.0" mnemonicParsing="false" onAction="#btnComprobar_click" prefHeight="31.0" prefWidth="202.0" text="Comprobar">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+    <TextField fx:id="textNombre" layoutX="25.0" layoutY="227.0" prefWidth="200.0" promptText="Nombre" />
+      <TableView fx:id="table" layoutX="260.0" layoutY="47.0" prefHeight="454.0" prefWidth="396.0">
+        <columns>
+          <TableColumn fx:id="col_num" prefWidth="121.0" text="Numero" />
+            <TableColumn fx:id="col_baño" prefWidth="143.0" text="Baño" />
+            <TableColumn fx:id="col_tipo" prefWidth="133.0" text="Tipo" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelHabDisponible" layoutX="264.0" layoutY="21.0" text="Habitaciones del Hotel">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font></Label>
+      <Button fx:id="btnCalculoPrecio" layoutX="274.0" layoutY="549.0" mnemonicParsing="false" onAction="#btnCalculoPrecio_click" prefHeight="31.0" prefWidth="258.0" text="Calculo Precio">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReservar" layoutX="26.0" layoutY="552.0" mnemonicParsing="false" onAction="#btnReservar_click" prefHeight="21.0" prefWidth="211.0" text="Reservar">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <HBox layoutX="22.0" layoutY="462.0" spacing="15.0" />
+      <Label layoutX="274.0" layoutY="500.0" prefHeight="50.0" prefWidth="109.0" text="Precio:">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPrecio" layoutX="376.0" layoutY="507.0" text="Aquí ira el precio">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSalir" layoutX="585.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnSalir_click" prefHeight="13.0" prefWidth="71.0" text="Salir" textFill="#ee0606">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="textNumeroHabitacion_Plural" layoutX="27.0" layoutY="474.0" prefHeight="31.0" prefWidth="202.0" promptText="Numeros de Habitaciones" />
+      <CheckBox fx:id="checkPlural" layoutX="27.0" layoutY="445.0" mnemonicParsing="false" onAction="#checkPlural_click" text="Si, más de una habitación" />
+      <Text fx:id="labelAdicional" layoutX="24.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Separar habitaciones adicionales con una coma">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+      <Label layoutX="27.0" layoutY="410.0" text="¿Desea agregar otra Habitación?">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnRefrescar" layoutX="552.0" layoutY="19.0" mnemonicParsing="false" onAction="#btnRefrescar_click" text="Refrescar Tabla" />
+      <Button fx:id="btnVolver" layoutX="585.0" layoutY="521.0" mnemonicParsing="false" onAction="#btnVolver_click" prefHeight="17.0" prefWidth="71.0" text="Volver" textFill="#3905f5">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="textApellido" layoutX="25.0" layoutY="264.0" prefWidth="200.0" promptText="Apellido" />
+  </children>
+</AnchorPane>
