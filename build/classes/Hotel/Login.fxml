@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" blendMode="SRC_OVER" cache="true" cacheHint="DEFAULT" depthTest="DISABLE" disable="false" focusTraversable="false" prefHeight="266.999755859375" prefWidth="237.0" visible="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Hotel.LoginController">
+  <children>
+    <VBox id="VBox" alignment="CENTER" layoutX="18.0" layoutY="47.0" spacing="13.0">
+      <children>
+        <VBox id="VBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <Label id="lblUsuario" text="Usuario" />
+            <TextField id="TextFieldUsuario" fx:id="txtUsuario" prefWidth="200.0" />
+            <Label id="labelContraseña" text="Contraseña" />
+            <PasswordField id="TextFieldContraseña" fx:id="txtContrasena" prefWidth="200.0" text="" />
+          </children>
+        </VBox>
+        <Button id="BotonIngresar" fx:id="btnIngresar" mnemonicParsing="false" onAction="#btnIngresar_click" prefHeight="43.0" prefWidth="200.0" text="Ingresar">
+          <font>
+            <Font name="System Bold Italic" size="12.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Button id="BotonSalir" fx:id="btnSalir" font="$x1" mnemonicParsing="false" onAction="#btnSalir_click" prefHeight="43.0" prefWidth="200.0" text="Salir" textFill="RED" />
+      </children>
+    </VBox>
+    <Label id="labelTitulo" graphicTextGap="4.0" layoutX="81.0" layoutY="22.0" prefWidth="95.0" text="Bienvenido" textAlignment="CENTER" textFill="#003300" textOverrun="CLIP" underline="false">
+      <font>
+        <Font name="Times New Roman" size="16.0" />
+      </font>
+    </Label>
+    <VBox id="VBox" alignment="CENTER" layoutX="18.0" layoutY="178.0" spacing="15.0" />
+  </children>
+</AnchorPane>

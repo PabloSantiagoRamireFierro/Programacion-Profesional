@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="296.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hotel.CajaController">
+   <children>
+      <Label layoutX="30.0" layoutY="15.0" text="Balance del Día">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="23.0" layoutY="46.0" prefHeight="200.0" prefWidth="572.0">
+        <columns>
+          <TableColumn fx:id="col_nombre" prefWidth="67.0" text="Nombre " />
+          <TableColumn fx:id="col_apellido" prefWidth="67.0" text="Apellido " />
+            <TableColumn fx:id="col_tipo" prefWidth="97.0" text="Tipo de Reserva" />
+            <TableColumn fx:id="col_valor" prefWidth="73.0" text="Valor Total" />
+            <TableColumn fx:id="col_fecha" prefWidth="102.0" text="Fecha de Ingreso" />
+            <TableColumn fx:id="col_pago" prefWidth="95.0" text="Pago Realizado" />
+            <TableColumn fx:id="col_rut" prefWidth="69.0" text="RUT" />
+        </columns>
+      </TableView>
+      <VBox layoutX="30.0" layoutY="265.0" spacing="16.0" />
+      <VBox layoutX="471.0" layoutY="265.0" spacing="5.0" />
+      <Button fx:id="btnConfirmar" layoutX="631.0" layoutY="236.0" mnemonicParsing="false" onAction="#btnConfirmar_click" prefHeight="44.0" prefWidth="149.0" text="Confirmar">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" layoutX="542.0" layoutY="252.0" mnemonicParsing="false" onAction="#btnVolver_click" prefHeight="32.0" prefWidth="53.0" text="Volver" textFill="#2001eb">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSalir" layoutX="479.0" layoutY="252.0" mnemonicParsing="false" onAction="#btnSalir_click" prefHeight="33.0" prefWidth="53.0" text="Salir" textFill="#f80000">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="IngresoTotal" layoutX="21.0" layoutY="253.0" text="Ingreso Total: ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtRut" layoutX="630.0" layoutY="147.0" promptText="RUT" />
+      <TextField fx:id="txtNombre" layoutX="630.0" layoutY="105.0" promptText="Nombre" />
+      <DatePicker fx:id="dateIngreso" layoutX="631.0" layoutY="190.0" prefHeight="25.0" prefWidth="149.0" promptText="Fecha de Ingreso" />
+      <Label layoutX="622.0" layoutY="18.0" text="Ingrese Datos para Confirmar">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceReserva" layoutX="631.0" layoutY="58.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
